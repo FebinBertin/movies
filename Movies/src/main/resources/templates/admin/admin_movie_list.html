@@ -1,0 +1,15 @@
+<h2>Movie List (Admin)</h2>
+
+<a href="/admin/add-movie">Add Movie</a>
+
+<table>
+<tr><th>Name</th><th>Actions</th></tr>
+<tr th:each="m : ${movies}">
+    <td th:text="${m.title}"></td>
+    <td>
+        <a th:href="@{/admin/edit-movie/{id}(id=${m.id})}">Edit</a>
+        <a th:href="@{/admin/delete-movie/{id}(id=${m.id})}">Delete</a>
+        <a th:href="@{/user/watch/{id}(id=${m.id})}">Watch</a>
+    </td>
+</tr>
+</table>

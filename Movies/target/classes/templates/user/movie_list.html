@@ -1,0 +1,11 @@
+<h2>Movie List (User)</h2>
+
+<table>
+<tr><th>Name</th><th>Action</th></tr>
+<tr th:each="m : ${movies}">
+    <td th:text="${m.title}"></td>
+    <td>
+        <a th:href="@{/user/watch/{id}(id=${m.id})}">Watch</a>
+    </td>
+</tr>
+</table>

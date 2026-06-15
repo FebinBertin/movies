@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="layout :: content">
+
+<div class="text-center">
+    <h2 th:text="${movie.title}"></h2>
+    <video width="75%" controls class="mt-3">
+        <source th:src="${movie.videoUrl}" type="video/mp4">
+    </video>
+    <p class="mt-3" th:text="${movie.description}"></p>
+    <a href="/user/movies" class="btn btn-secondary mt-2">⬅ Back to Movies</a>
+</div>
+</html>
